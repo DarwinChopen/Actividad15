@@ -13,9 +13,12 @@ while True:
             nombre=input("Ingrese un nombre y u apellido(ejem, Juan Perez) ")
             edad=int(input("Ingrese su edad: "))
             fechanac=int("Ingrese su fecha de nacimineto... dd/mm/aaaa")
+            datos = [nombre, edad, fechanac]
 
-
-
+            print("Exitoso...Datos ingresados correctamente:")
+            print(f"Nombre completo: {datos[0]}")
+            print(f"Edad: {datos[1]}")
+            print(f"Fecha de nacimiento: {datos[2]}")
         case 2:
             print("")
         case 3:
