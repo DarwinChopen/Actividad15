@@ -68,7 +68,7 @@ while True:
                 if not edadIngresada.isdigit():
                     print("La edad debe ser un número entero positivo.")
                 else:
-                    edad = int(input(edadIngresada))
+                    edad = int(edadIngresada)
                     if edad <= 0 or edad > 120:
                         print("La edad debe estar entre 1 y 100.")
                     else:
@@ -76,7 +76,18 @@ while True:
                         print("Exitoso...Se actualizo su edad")
                         break
         case 4:
-            print("Eliminar")
+            print("***Eliminar***")
+            while True:
+                confirmar = input("Está seguro que desea eliminar los datos (s/n): ").lower()
+                if confirmar in ('s','n'):
+                    break
+                else:
+                    print("Por favor ingrese 's' para sí o 'n' para no.")
+            if confirmar == 's':
+                datos.clear()
+                print("Datos eliminados.")
+            else:
+                print("No re Eliminaron los datis.")
         case 5:
             print("Saliendo...")
             break
